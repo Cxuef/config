@@ -1,0 +1,78 @@
+
+# adb command
+alias readb="adb shell stop && adb shell start"
+alias reserver="adb kill-server && adb start-server"
+alias qroot="adb shell setprop ro.debuggable 1"
+alias mroot="adb shell input text "*#*#13646633#*#*" "
+alias rebootloader="adb reboot bootloader"
+alias adbvideo="adb shell screenrecord /sdcard/videoshot.mp4"
+alias adbpullvideo="adb pull sdcard/videoshot.mp4 ."
+alias adbscreencap="adb shell /system/bin/screencap -p /sdcard/screenshot.png"
+alias adbpullscreencap="adb pull sdcard/screenshot.png ."
+alias adbrm="adb root && adb remount"
+alias adblog="adb logcat |grep"
+alias adbloge="adb logcat *:E"
+alias adbps="adb shell ps |grep"
+alias adbkill="adb shell kill "
+alias adbpower="adb shell input keyevent 26"
+alias adbhome="adb shell input keyevent 3"
+alias adbmusic="adb push /home/eirot/Music /mnt/sdcard/Fmusic"
+alias adbamsettings="adb shell am start com.android.settings"
+alias adbampx2dp="adb shell am start com.ckt.eirot.px2dp/.MainActivity"
+alias adbamsohu="adb shell am start com.sohu.sohuvideo/.ui.MainActivity"
+alias adbpushsettings="adb push out/target/product/Iris4G02A_S12A/system/priv-app/Settings/Settings.apk /system/priv-app/Settings/"
+
+# Compile relevant command
+alias slunch="source build/envsetup.sh && lunch"
+alias tmake="make update-api && make -j8 2>&1 |tee build.log"
+alias nmake="./mk ckt95_lw_kk n"
+alias rmake="./mk r"
+alias upapi="make update-api"
+alias iris01a="cd /home/eirot/MyDev/Iris4G/mt6595_kk"
+alias iris4GPlus="cd /home/eirot/MyDev/Iris4G6797/mt6797"
+alias blink="cd /home/eirot/MyDev/mt6737"
+alias mahicam="./mk -t mma goldsand/packages/apps/HiCam"
+alias mmhicam="./mk -t mm goldsand/packages/apps/HiCam"
+alias masetting="./mk -t mma packages/apps/Settings"
+alias mmsetting="./mk -t mm packages/apps/Settings"
+
+# Directory command
+alias cd2="cd ../.."
+alias cd3="cd ../../.."
+alias cd4="cd ../../../.."
+alias home="cd /home/eirot/MyDev"
+alias fsize="du -h --max-depth=1"
+alias grepstr="grep ./ -re "
+
+#python3.5.1
+alias ipython3.5="/usr/local/python3.5.1/bin/python3.5"
+
+alias nginx="sudo /usr/local/nginx/sbin/nginx"
+
+# hexo command
+alias hexocgd="hexo clean && hexo g && hexo d"
+
+alias sublime3="/home/eirot/MyDev/sublime_text_3/sublime_text"
+
+# print the video info with json using ffprobe
+alias ffprobe="ffprobe -v quiet -print_format json -show_format -show_streams "
+# Git command
+alias grebase="git pull --rebase"
+alias gbv="git branch -vv"
+alias gba="git branch -a"
+alias gsl="git stash list"
+alias gss="git stash save"
+alias gsa="git stash apply"
+alias grh="git reset HEAD"
+alias gca="git commit --amend"
+alias gdc="git diff --cached"
+alias gchange="git status ."
+alias gitlog="git log --graph --pretty=format:'%Cgreen%h%Creset(%Cblue%cd%Creset)-%Cblue%an%Creset %Cgreen%s%Creset' --date=short"
+alias pushlras12a="git push origin HEAD:refs/for/LRA01A-S12A"
+alias pushlras13a="git push origin HEAD:refs/for/LRA01A-S13A"
+alias pushfavos14a="git push origin HEAD:refs/for/FAVO02B-S14A"
+alias pushirisUSA="git push origin HEAD:refs/for/hicam-baseline_HiCam01A-S01A"
+alias pushirisChina="git push origin HEAD:refs/for/hicam-baseline_HiCam01A-S11A"
+alias pushiris4g="git push origin HEAD:refs/for/Iris4Gplus-baseline"
+alias pushblink="git push origin HEAD:refs/for/Iris4GV3-baseline"
+alias pushHicamChina="git push origin HEAD:refs/for/hicam-baseline_HiCam01A-S11A_Release_0624"
